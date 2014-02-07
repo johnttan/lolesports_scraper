@@ -54,17 +54,22 @@ def processGame(jsonmatchdata):
         for playerid, player in team.items():
             playername = player['playername']
             team[playername] = team.pop(playerid)
-
+    matchdoc['playerlist'] = []
     matchdoc['winteamname'] = winteamname
     matchdoc['winteamid'] = winteamid
     matchdoc['loseteamname'] = loseteamname
     matchdoc['loseteamid'] = loseteamid
 
-    matchdoc['winteam'] = matchdoc.pop(matchdoc['winteamid'])
-    matchdoc['loseteam'] = matchdoc.pop(matchdoc['loseteamid'])
-
+    matchdoc['players'] = matchdoc.pop(matchdoc['winteamid'])
+    for playername, player in matchdoc.pop(matchdoc['loseteamid']).items():
+        matchdoc['players'][playername] = player
+    for playername, player in matchdoc['players'].items():
+        matchdoc['playerlist'].append(playername)
     matchdoc['gameID'] = matchnumber
     matchdoc['region'] = region
+    matchdoc['scored'] = 0
+    matchdoc['analyzed'] = 0
+    matchdoc['statistics'] = {}
     return matchdoc
 
 def retrieveGame(url):

@@ -3,7 +3,7 @@ import pymongo
 from pprint import pprint
 from pymongo import MongoClient
 from config import configuration as cfg
-from playerinfo import playerinfo as playerinfo
+from playerinfo import playerinfo
 from scraper import retrieveandprocessGame as retrieve
 
 
@@ -101,6 +101,6 @@ def retrieveallgames():
 
 
 if cfg['dev']['database']:
-    #retrieveallgames()
+    retrieveallgames()
     retrievelatest('na')
     retrievelatest('eu')
