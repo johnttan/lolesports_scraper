@@ -18,6 +18,8 @@ def processGame(jsonmatchdata):
             region = 'na'
     elif int(matchnumber) in cfg['gamematchnumbers']['eu']:
             region = 'eu'
+    #Game EG vs. C9 in between 1882 and 1884 got assigned match number 2156 by Riot
+    #these lines catch the chronological error and corrects it for storing in the database.
     elif int(matchnumber) == 2156:
             matchnumber = 1883
             region = 'na'
