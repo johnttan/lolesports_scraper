@@ -12,7 +12,7 @@ def processGame(jsonmatchdata):
     matchnumber = list(jsonmatchdata)[0]
     matchdoc = jsonmatchdata[matchnumber]
 
-    if cfg['dev']:
+    if cfg['dev']['log']:
         print('gameID: ' + str(matchnumber))
     if int(matchnumber) in cfg['gamematchnumbers']['na']:
             region = 'na'
@@ -33,9 +33,10 @@ def processGame(jsonmatchdata):
     for teamid, team in matchdoc.items():
         for playerid, player in team.items():
             """rename some key fields and store match information. region, matchid, etc."""
+
             player['playername'] = player.pop('player field')
             player['teamid'] = teamid
-            player['matchid'] = matchnumber
+            player['matchid'] = int(matchnumber)
             player['region'] = region
             player['playerid'] = playerid
             player['teamid'] = teamid
@@ -50,7 +51,7 @@ def processGame(jsonmatchdata):
                 loseteamname = player['teamname']
                 loseteamid = teamid
                 
-        """switch key names to 'winteam' and 'loseteam'. assign appropriate team."""
+        """switch key names to playername instead of playerid. assign appropriate team."""
         for playerid, player in team.items():
             playername = player['playername']
             team[playername] = team.pop(playerid)
@@ -65,11 +66,22 @@ def processGame(jsonmatchdata):
         matchdoc['players'][playername] = player
     for playername, player in matchdoc['players'].items():
         matchdoc['playerlist'].append(playername)
-    matchdoc['gameID'] = matchnumber
+    matchdoc['gameID'] = int(matchnumber)
     matchdoc['region'] = region
     matchdoc['scored'] = 0
     matchdoc['analyzed'] = 0
     matchdoc['statistics'] = {}
+
+    #for redundancy
+    for playername in list(matchdoc['playerlist']):
+        if playername not in list(playerinfo):
+                pid = playername
+                pname = matchdoc['players']['playername']
+                matchdoc['players'][pname] = matchdoc['players'].pop(pid)
+                matchdoc['playerlist'].remove(pname)
+                matchdoc['playerlist'].append(pname)
+
+
     return matchdoc
 
 def retrieveGame(url):
