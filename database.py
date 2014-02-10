@@ -19,8 +19,9 @@ Specify argument region as string, i.e. retrievelatest('na')
 """
 Retrieve(matchnumber). Returns matchdoc dict.
 """
-client = MongoClient(cfg['url'], cfg['port'])
-db = client[cfg['database']]
+
+client = MongoClient(cfg['deployurl'])
+db = client[cfg['deploydatabase']]
 cUsers = db.Users
 cPlayers = db.Players
 cGames = db.Games
@@ -98,10 +99,13 @@ def retrieveallgames():
     retrievelatest('eu')
 
 
-
+def retrievelatestna():
+    retrievelatest('na')
+def retrievelatesteu():
+    retrievelatest('eu')
 
 if cfg['dev']['database']:
     resetretrievedurls()
-    retrieveallgames()
+    # retrieveallgames()
     retrievelatest('na')
     retrievelatest('eu')

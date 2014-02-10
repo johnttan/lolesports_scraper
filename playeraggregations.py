@@ -8,15 +8,17 @@ from bson.son import SON
 from scoreconfig import scoreconfiguration as sconfig
 sconfig = sconfig['scorearray']
 
-client = MongoClient(cfg['url'], cfg['port'])
-db = client[cfg['database']]
-cUsers = db.Users
+client = MongoClient(cfg['deployurl'])
+db = client[cfg['deploydatabase']]
+cUsers = db.users
 cPlayers = db.Players
 cGames = db.Games
 
 
 
-
+"""
+Uses mongoDB aggregation pipeline to aggregate scores and sum them.
+"""
 def calctotalscore(player, score):
     playername = player['playername']
     return cGames.aggregate([
@@ -53,4 +55,22 @@ def calcalltotalplayerscore():
 # for player in cPlayers.find({'playername':'Bjergsen'}):
 #     pprint(calctotalscore(player, 'kdascore'))
 
-calcalltotalplayerscore()
+# calcalltotalplayerscore()
+
+# for user in cUsers.find():
+#     print(user)
+#     if 'rosterarray' not in user:
+#         print('lol not found')
+#     else:
+#         roster1 = cPlayers.aggregate([
+#                 {
+#                 '$match': {'playername':{'$in':user['rosterarray']}}
+#                 }
+#             ])['result']
+
+#         roster = {}
+#         for player in roster1:
+#             roster[player['role']] = player['_id']
+#         print(roster)
+#         cUsers.update({'username':user['username']}, {'$set':{'roster':roster}})
+

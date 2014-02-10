@@ -5,8 +5,8 @@ from pprint import pprint
 from pymongo import MongoClient
 from config import configuration as cfg
 
-client = MongoClient(cfg['url'], cfg['port'])
-db = client[cfg['database']]
+client = MongoClient(cfg['deployurl'])
+db = client[cfg['deploydatabase']]
 cUsers = db.Users
 cPlayers = db.Players
 cGames = db.Games

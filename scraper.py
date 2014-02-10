@@ -76,9 +76,9 @@ def processGame(jsonmatchdata):
     for playername in list(matchdoc['playerlist']):
         if playername not in list(playerinfo):
                 pid = playername
-                pname = matchdoc['players']['playername']
+                pname = matchdoc['players'][pid]['playername']
                 matchdoc['players'][pname] = matchdoc['players'].pop(pid)
-                matchdoc['playerlist'].remove(pname)
+                matchdoc['playerlist'].remove(pid)
                 matchdoc['playerlist'].append(pname)
 
 

@@ -81,7 +81,8 @@ players = dict(
     Impaler=['jungle', 'Supa Hot Crew XD'],
     Moopz=['mid', 'Supa Hot Crew XD'],
     Migxa=['support', 'Supa Hot Crew XD'],
-    Chauster=['mid', 'CLG']
+    Chauster=['mid', 'CLG'],
+    Saintvicious=['support', 'Curse']
   )
 
 players['Mr RalleZ'] = ['adc', 'Supa Hot Crew XD']

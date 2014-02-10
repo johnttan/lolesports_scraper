@@ -5,8 +5,8 @@ from pymongo import MongoClient
 from config import configuration as cfg
 from playerinfo import playerinfo
 
-client = MongoClient(cfg['url'], cfg['port'])
-db = client[cfg['database']]
+client = MongoClient(cfg['deployurl'])
+db = client[cfg['deploydatabase']]
 cUsers = db.Users
 cPlayers = db.Players
 cGames = db.Games
@@ -36,7 +36,6 @@ def updateplayerdata():
         for game in gamesplayed:
             if game['gameID'] == max(gamesplayedarray):
                 latestgame = game
-
 
         cPlayers.update({'playername':playername}, {'$set':{'gamesplayed':gamesplayed, 'latestgame':latestgame}})
 
