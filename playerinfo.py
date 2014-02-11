@@ -19,7 +19,7 @@ players = dict(
     WildTurtle=['adc', 'TSM'],
     Xpecial=['support', 'TSM'],
     Nien=['top', 'CLG'],
-    Link=['jungle', 'CLG'],
+    Link=['mid', 'CLG'],
     HotshotGG=['mid', 'CLG'],
     Doublelift=['adc', 'CLG'],
     Aphromoo=['support', 'CLG'],
@@ -82,7 +82,8 @@ players = dict(
     Moopz=['mid', 'Supa Hot Crew XD'],
     Migxa=['support', 'Supa Hot Crew XD'],
     Chauster=['mid', 'CLG'],
-    Saintvicious=['support', 'Curse']
+    Saintvicious=['support', 'Curse'],
+    dexter=['jungle', 'CLG']
   )
 
 players['Mr RalleZ'] = ['adc', 'Supa Hot Crew XD']
