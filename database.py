@@ -108,4 +108,4 @@ if cfg['dev']['database']:
     # resetretrievedurls()
     # retrieveallgames()
     retrievelatest('na')
-    # retrievelatest('eu')
+    retrievelatest('eu')
