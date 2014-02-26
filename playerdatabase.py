@@ -46,6 +46,8 @@ def updateplayerdatabygame(game):
                 cPlayers.update({'playername':playername}, {'$set':{'gamesplayed':gamesplayed}})
 
 
-if cfg['dev']['playerdatabase']:
-    initializeplayers()
-    updateplayerdata()
+exports = {
+    'initializeplayers': initializeplayers,
+    'updateplayerdata': updateplayerdata,
+    'updateplayerdatabygame': updateplayerdatabygame
+}

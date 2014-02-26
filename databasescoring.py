@@ -1,4 +1,5 @@
-from scoring import calcgamescore as gamescore
+from scoring import exports as scoring
+gamescore = scoring['calcgamescore']
 import json
 import pymongo
 from pprint import pprint
@@ -23,5 +24,7 @@ def nonscoredgamescoring():
         newgame['scored'] = 1
         cGames.save(newgame)
 
-if cfg['dev']['databasescoring']:
-    nonscoredgamescoring()
+exports = {
+    'nonscoredgamescoring': nonscoredgamescoring,
+    'allgamerescore': allgamerescore
+    }

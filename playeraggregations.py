@@ -54,8 +54,10 @@ def calcalltotalplayerscore():
 
 # for player in cPlayers.find({'playername':'Bjergsen'}):
 #     pprint(calctotalscore(player, 'kdascore'))
-
-calcalltotalplayerscore()
+exports = {
+    'calcalltotalplayerscore': calcalltotalplayerscore,
+    'calctotalscore': calctotalscore
+}
 
 # for user in cUsers.find():
 #     print(user)

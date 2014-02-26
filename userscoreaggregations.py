@@ -50,19 +50,21 @@ def calcuserscore(singleuser = None):
 
 
 
-nyph = cPlayers.find_one({'playername':'Nyph'})
-benny = cPlayers.find_one({'playername':'Benny'})
-froggen = cPlayers.find_one({'playername':'Froggen'})
-shook = cPlayers.find_one({'playername':'Shook'})
-wickd = cPlayers.find_one({'playername':'Wickd'})
-mancloud = cPlayers.find_one({'playername':'mancloud'})
-araneae = cPlayers.find_one({'playername':'Araneae'})
-bloodwater = cPlayers.find_one({'playername':'BloodWater'})
-cUsers.update({'username':'ostonzi'}, {'$set':{'oldplayerslastgame':{}, 'newplayersfirstgame':{}, 'oldroster':[]}})
-cUsers.update({'username':'Arcwelder'}, {'$set':{'oldplayerslastgame':{'Nyph':2015}, 'newplayersfirstgame':{'VandeR':2019}, 'oldroster':[nyph]}})
-cUsers.update({'username':'Antiquum'}, {'$set':{'oldplayerslastgame':{'Froggen':2018, 'Benny': 1884}, 'newplayersfirstgame':{'Overpow':2019, 'Xaxus':2019}, 'oldroster':[froggen, benny]}})
-cUsers.update({'username':'im24dailey'}, {'$set':{'oldplayerslastgame':{'Wickd':2018, 'Shook': 2018}, 'newplayersfirstgame':{'Darien': 2019, 'Crumbzz': 1885}, 'oldroster':[wickd, shook]}})
-cUsers.update({'username':'Mini0040'}, {'$set':{'oldplayerslastgame':{'Araneae':2018}, 'newplayersfirstgame':{'dexter':1885}, 'oldroster':[araneae]}})
-cUsers.update({'username':'Eudicot'}, {'$set':{'oldplayerslastgame':{'BloodWater':1884}, 'newplayersfirstgame':{'KiWiKiD':1885}, 'oldroster':[bloodwater]}})
+# nyph = cPlayers.find_one({'playername':'Nyph'})
+# benny = cPlayers.find_one({'playername':'Benny'})
+# froggen = cPlayers.find_one({'playername':'Froggen'})
+# shook = cPlayers.find_one({'playername':'Shook'})
+# wickd = cPlayers.find_one({'playername':'Wickd'})
+# mancloud = cPlayers.find_one({'playername':'mancloud'})
+# araneae = cPlayers.find_one({'playername':'Araneae'})
+# bloodwater = cPlayers.find_one({'playername':'BloodWater'})
+# cUsers.update({'username':'ostonzi'}, {'$set':{'oldplayerslastgame':{}, 'newplayersfirstgame':{}, 'oldroster':[]}})
+# cUsers.update({'username':'Arcwelder'}, {'$set':{'oldplayerslastgame':{'Nyph':2015}, 'newplayersfirstgame':{'VandeR':2019}, 'oldroster':[nyph]}})
+# cUsers.update({'username':'Antiquum'}, {'$set':{'oldplayerslastgame':{'Froggen':2018, 'Benny': 1884}, 'newplayersfirstgame':{'Overpow':2019, 'Xaxus':2019}, 'oldroster':[froggen, benny]}})
+# cUsers.update({'username':'im24dailey'}, {'$set':{'oldplayerslastgame':{'Wickd':2018, 'Shook': 2018}, 'newplayersfirstgame':{'Darien': 2019, 'Crumbzz': 1885}, 'oldroster':[wickd, shook]}})
+# cUsers.update({'username':'Mini0040'}, {'$set':{'oldplayerslastgame':{'Araneae':2018}, 'newplayersfirstgame':{'dexter':1885}, 'oldroster':[araneae]}})
+# cUsers.update({'username':'Eudicot'}, {'$set':{'oldplayerslastgame':{'BloodWater':1884}, 'newplayersfirstgame':{'KiWiKiD':1885}, 'oldroster':[bloodwater]}})
 
-calcuserscore()
+exports = {
+    'calcuserscore': calcuserscore
+}

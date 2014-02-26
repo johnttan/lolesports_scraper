@@ -104,8 +104,7 @@ def retrievelatestna():
 def retrievelatesteu():
     retrievelatest('eu')
 
-if cfg['dev']['database']:
-    # resetretrievedurls()
-    # retrieveallgames()
-    retrievelatest('na')
-    retrievelatest('eu')
+
+exports = {
+    'retrievelatest': retrievelatest
+}

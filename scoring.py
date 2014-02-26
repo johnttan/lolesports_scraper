@@ -73,3 +73,6 @@ def calcgamescore(game):
     return game
 
 
+exports = {
+    'calcgamescore': calcgamescore
+}

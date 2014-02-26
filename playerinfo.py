@@ -29,7 +29,7 @@ players = dict(
     Yellowpete=['adc', 'Evil Geniuses'],
     Krepo=['support', 'Evil Geniuses'],
     Benny=['top', 'XDG'],
-    Zuna=['jungle', 'XDG'],
+    Zuna=['support', 'XDG'],
     mancloud=['mid', 'XDG'],
     Xmithie=['adc', 'XDG'],
     BloodWater=['support', 'XDG'],
@@ -83,7 +83,12 @@ players = dict(
     Migxa=['support', 'Supa Hot Crew XD'],
     Chauster=['mid', 'CLG'],
     Saintvicious=['support', 'Curse'],
-    dexter=['jungle', 'CLG']
+    dexter=['jungle', 'CLG'],
+    Nickwu=['jungle', 'XDG'],
+    Zorozero=['top', 'Gambit'],
+    Nukeduck=['mid', 'Gambit'],
+    Hulberto=['jungle', 'Gambit'],
+    fury=['adc', 'Gambit']
   )
 
 players['Mr RalleZ'] = ['adc', 'Supa Hot Crew XD']
