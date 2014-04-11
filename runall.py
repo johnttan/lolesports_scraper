@@ -29,11 +29,16 @@ class Loldraftscraper:
         playeraggregations['calctotalscore'](player)
     def calcuserscore(self):
         userscoreaggregations['calcuserscore']()
+    def resetretrieve(self):
+        database['resetretrieved']()
 
-    def updateall(self, initialize=False):
+    def updateall(self, initialize=False, reset=False):
+        if reset == True:
+            self.resetretrieve()
         self.retrievelatest('na')
         self.retrievelatest('eu')
         self.scorelatest()
+
         if initialize == True:
             self.initializeplayers()
         self.updateplayerdata()
@@ -42,7 +47,8 @@ class Loldraftscraper:
 
 
 scraper = Loldraftscraper()
-
-scraper.updateall()
+reset = input('Reset? True or False')
+initialize = input('Initialize players? True or False. True if added new players')
+scraper.updateall(initialize, reset)
 
 

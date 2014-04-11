@@ -102,7 +102,7 @@ def retrieveandprocessGame(urlmatchnumber):
     url = cfg['retrieveurl'] + str(urlmatchnumber)
     jsonmatchdata = retrieveGame(url)
     matchdoc = processGame(jsonmatchdata)
-    
+    #print(matchdoc)
     matchdoc['URLmatchnumber'] = urlmatchnumber
     return matchdoc
 

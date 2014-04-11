@@ -17,6 +17,10 @@ def calccsscore(playername, game, player):
         if playername1 != playername and player1['role'] == player['role']:
             oppcs = player1['minion_kills']
     role = player['role']
+    try:
+        oppcs
+    except NameError:
+        print('{} wrong role'.format(playername))
     csscore = calculate['csscore'](cs, oppcs, role)
     return csscore
 

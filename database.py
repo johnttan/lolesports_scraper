@@ -106,5 +106,6 @@ def retrievelatesteu():
 
 
 exports = {
-    'retrievelatest': retrievelatest
+    'retrievelatest': retrievelatest,
+    'resetretrieved': resetretrievedurls
 }
