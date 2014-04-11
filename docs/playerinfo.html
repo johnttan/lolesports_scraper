@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <title>playerinfo.py</title>
+  <link rel="stylesheet" href="pycco.css">
+</head>
+<body>
+<div id="background"></div>
+<div id='container'>
+  <div class='section'>
+    <div class='docs'><h1>playerinfo.py</h1></div>
+  </div>
+  <div class='clearall'>
+  <div class='section' id='section-0'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-0'>#</a>
+      </div>
+      <p>Dictionary of playerinfo that cannot be easily obtained while retrieving match pages</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">players</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+    <span class="n">Cruzerthebruzer</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;top&#39;</span><span class="p">,</span> <span class="s">&#39;Dignitas&#39;</span><span class="p">],</span>
+    <span class="n">Crumbzz</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;jungle&#39;</span><span class="p">,</span> <span class="s">&#39;Dignitas&#39;</span><span class="p">],</span>
+    <span class="n">Scarra</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;mid&#39;</span><span class="p">,</span> <span class="s">&#39;Dignitas&#39;</span><span class="p">],</span>
+    <span class="n">Imaqtpie</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;adc&#39;</span><span class="p">,</span> <span class="s">&#39;Dignitas&#39;</span><span class="p">],</span>
+    <span class="n">KiWiKiD</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;support&#39;</span><span class="p">,</span> <span class="s">&#39;Dignitas&#39;</span><span class="p">],</span>
+    <span class="n">Balls</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;top&#39;</span><span class="p">,</span> <span class="s">&#39;Cloud 9&#39;</span><span class="p">],</span>
+    <span class="n">Meteos</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;jungle&#39;</span><span class="p">,</span> <span class="s">&#39;Cloud 9&#39;</span><span class="p">],</span>
+    <span class="n">Hai</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;mid&#39;</span><span class="p">,</span> <span class="s">&#39;Cloud 9&#39;</span><span class="p">],</span>
+    <span class="n">Sneaky</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;adc&#39;</span><span class="p">,</span> <span class="s">&#39;Cloud 9&#39;</span><span class="p">],</span>
+    <span class="n">LemonNation</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;support&#39;</span><span class="p">,</span> <span class="s">&#39;Cloud 9&#39;</span><span class="p">],</span>
+    <span class="n">Dyrus</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;top&#39;</span><span class="p">,</span> <span class="s">&#39;TSM&#39;</span><span class="p">],</span>
+    <span class="n">TheOddOne</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;jungle&#39;</span><span class="p">,</span> <span class="s">&#39;TSM&#39;</span><span class="p">],</span>
+    <span class="n">Bjergsen</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;mid&#39;</span><span class="p">,</span> <span class="s">&#39;TSM&#39;</span><span class="p">],</span>
+    <span class="n">WildTurtle</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;adc&#39;</span><span class="p">,</span> <span class="s">&#39;TSM&#39;</span><span class="p">],</span>
+    <span class="n">Xpecial</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;support&#39;</span><span class="p">,</span> <span class="s">&#39;TSM&#39;</span><span class="p">],</span>
+    <span class="n">Nien</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;top&#39;</span><span class="p">,</span> <span class="s">&#39;CLG&#39;</span><span class="p">],</span>
+    <span class="n">Link</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;mid&#39;</span><span class="p">,</span> <span class="s">&#39;CLG&#39;</span><span class="p">],</span>
+    <span class="n">HotshotGG</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;mid&#39;</span><span class="p">,</span> <span class="s">&#39;CLG&#39;</span><span class="p">],</span>
+    <span class="n">Doublelift</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;adc&#39;</span><span class="p">,</span> <span class="s">&#39;CLG&#39;</span><span class="p">],</span>
+    <span class="n">Aphromoo</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;support&#39;</span><span class="p">,</span> <span class="s">&#39;CLG&#39;</span><span class="p">],</span>
+    <span class="n">Innox</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;top&#39;</span><span class="p">,</span> <span class="s">&#39;Evil Geniuses&#39;</span><span class="p">],</span>
+    <span class="n">Snoopeh</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;jungle&#39;</span><span class="p">,</span> <span class="s">&#39;Evil Geniuses&#39;</span><span class="p">],</span>
+    <span class="n">Pobelter</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;mid&#39;</span><span class="p">,</span> <span class="s">&#39;Evil Geniuses&#39;</span><span class="p">],</span>
+    <span class="n">Yellowpete</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;adc&#39;</span><span class="p">,</span> <span class="s">&#39;Evil Geniuses&#39;</span><span class="p">],</span>
+    <span class="n">Krepo</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;support&#39;</span><span class="p">,</span> <span class="s">&#39;Evil Geniuses&#39;</span><span class="p">],</span>
+    <span class="n">Benny</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;top&#39;</span><span class="p">,</span> <span class="s">&#39;XDG&#39;</span><span class="p">],</span>
+    <span class="n">Zuna</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;support&#39;</span><span class="p">,</span> <span class="s">&#39;XDG&#39;</span><span class="p">],</span>
+    <span class="n">mancloud</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;mid&#39;</span><span class="p">,</span> <span class="s">&#39;XDG&#39;</span><span class="p">],</span>
+    <span class="n">Xmithie</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;adc&#39;</span><span class="p">,</span> <span class="s">&#39;XDG&#39;</span><span class="p">],</span>
+    <span class="n">BloodWater</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;support&#39;</span><span class="p">,</span> <span class="s">&#39;XDG&#39;</span><span class="p">],</span>
+    <span class="n">ZionSpartan</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;top&#39;</span><span class="p">,</span> <span class="s">&#39;Coast&#39;</span><span class="p">],</span>
+    <span class="n">NintendudeX</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;jungle&#39;</span><span class="p">,</span> <span class="s">&#39;Coast&#39;</span><span class="p">],</span>
+    <span class="n">Shiphtur</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;mid&#39;</span><span class="p">,</span> <span class="s">&#39;Coast&#39;</span><span class="p">],</span>
+    <span class="n">WizFujiiN</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;adc&#39;</span><span class="p">,</span> <span class="s">&#39;Coast&#39;</span><span class="p">],</span>
+    <span class="n">Daydreamin</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;support&#39;</span><span class="p">,</span> <span class="s">&#39;Coast&#39;</span><span class="p">],</span>
+    <span class="n">Quas</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;top&#39;</span><span class="p">,</span> <span class="s">&#39;Curse&#39;</span><span class="p">],</span>
+    <span class="n">IWillDominate</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;jungle&#39;</span><span class="p">,</span> <span class="s">&#39;Curse&#39;</span><span class="p">],</span>
+    <span class="n">Voyboy</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;mid&#39;</span><span class="p">,</span> <span class="s">&#39;Curse&#39;</span><span class="p">],</span>
+    <span class="n">Cop</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;adc&#39;</span><span class="p">,</span> <span class="s">&#39;Curse&#39;</span><span class="p">],</span>
+    <span class="n">Zekent</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;support&#39;</span><span class="p">,</span> <span class="s">&#39;Curse&#39;</span><span class="p">],</span>
+    <span class="n">Wickd</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;top&#39;</span><span class="p">,</span> <span class="s">&#39;Alliance&#39;</span><span class="p">],</span>
+    <span class="n">Shook</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;jungle&#39;</span><span class="p">,</span> <span class="s">&#39;Alliance&#39;</span><span class="p">],</span>
+    <span class="n">Froggen</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;mid&#39;</span><span class="p">,</span> <span class="s">&#39;Alliance&#39;</span><span class="p">],</span>
+    <span class="n">Tabzz</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;adc&#39;</span><span class="p">,</span> <span class="s">&#39;Alliance&#39;</span><span class="p">],</span>
+    <span class="n">Nyph</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;support&#39;</span><span class="p">,</span> <span class="s">&#39;Alliance&#39;</span><span class="p">],</span>
+    <span class="n">sOAZ</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;top&#39;</span><span class="p">,</span> <span class="s">&#39;Fnatic&#39;</span><span class="p">],</span>
+    <span class="n">Cyanide</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;jungle&#39;</span><span class="p">,</span> <span class="s">&#39;Fnatic&#39;</span><span class="p">],</span>
+    <span class="n">xPeke</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;mid&#39;</span><span class="p">,</span> <span class="s">&#39;Fnatic&#39;</span><span class="p">],</span>
+    <span class="n">Rekkles</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;adc&#39;</span><span class="p">,</span> <span class="s">&#39;Fnatic&#39;</span><span class="p">],</span>
+    <span class="n">YellOwStaR</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;support&#39;</span><span class="p">,</span> <span class="s">&#39;Fnatic&#39;</span><span class="p">],</span>
+    <span class="n">Kev1n</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;top&#39;</span><span class="p">,</span> <span class="s">&#39;Millenium&#39;</span><span class="p">],</span>
+    <span class="n">Araneae</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;jungle&#39;</span><span class="p">,</span> <span class="s">&#39;Millenium&#39;</span><span class="p">],</span>
+    <span class="n">Kerp</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;mid&#39;</span><span class="p">,</span> <span class="s">&#39;Millenium&#39;</span><span class="p">],</span>
+    <span class="n">Creaton</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;adc&#39;</span><span class="p">,</span> <span class="s">&#39;Millenium&#39;</span><span class="p">],</span>
+    <span class="n">Jree</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;support&#39;</span><span class="p">,</span> <span class="s">&#39;Millenium&#39;</span><span class="p">],</span>
+    <span class="n">Xaxus</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;top&#39;</span><span class="p">,</span> <span class="s">&#39;ROCCAT&#39;</span><span class="p">],</span>
+    <span class="n">Jankos</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;jungle&#39;</span><span class="p">,</span> <span class="s">&#39;ROCCAT&#39;</span><span class="p">],</span>
+    <span class="n">Overpow</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;mid&#39;</span><span class="p">,</span> <span class="s">&#39;ROCCAT&#39;</span><span class="p">],</span>
+    <span class="n">Celaver</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;adc&#39;</span><span class="p">,</span> <span class="s">&#39;ROCCAT&#39;</span><span class="p">],</span>
+    <span class="n">VandeR</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;support&#39;</span><span class="p">,</span> <span class="s">&#39;ROCCAT&#39;</span><span class="p">],</span>
+    <span class="n">Darien</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;top&#39;</span><span class="p">,</span> <span class="s">&#39;Gambit&#39;</span><span class="p">],</span>
+    <span class="n">Diamond</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;jungle&#39;</span><span class="p">,</span> <span class="s">&#39;Gambit&#39;</span><span class="p">],</span>
+    <span class="n">Genja</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;adc&#39;</span><span class="p">,</span> <span class="s">&#39;Gambit&#39;</span><span class="p">],</span>
+    <span class="n">EDward</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;support&#39;</span><span class="p">,</span> <span class="s">&#39;Gambit&#39;</span><span class="p">],</span>
+    <span class="n">fredy122</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;top&#39;</span><span class="p">,</span> <span class="s">&#39;SK Gaming&#39;</span><span class="p">],</span>
+    <span class="n">Svenskeren</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;jungle&#39;</span><span class="p">,</span> <span class="s">&#39;SK Gaming&#39;</span><span class="p">],</span>
+    <span class="n">Jesiz</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;mid&#39;</span><span class="p">,</span> <span class="s">&#39;SK Gaming&#39;</span><span class="p">],</span>
+    <span class="n">CandyPanda</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;adc&#39;</span><span class="p">,</span> <span class="s">&#39;SK Gaming&#39;</span><span class="p">],</span>
+    <span class="n">nRated</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;support&#39;</span><span class="p">,</span> <span class="s">&#39;SK Gaming&#39;</span><span class="p">],</span>
+    <span class="n">YoungBuck</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;top&#39;</span><span class="p">,</span> <span class="s">&#39;Copenhagen Wolves&#39;</span><span class="p">],</span>
+    <span class="n">Amazing</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;jungle&#39;</span><span class="p">,</span> <span class="s">&#39;Copenhagen Wolves&#39;</span><span class="p">],</span>
+    <span class="n">cowTard</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;mid&#39;</span><span class="p">,</span> <span class="s">&#39;Copenhagen Wolves&#39;</span><span class="p">],</span>
+    <span class="n">Forg1ven</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;adc&#39;</span><span class="p">,</span> <span class="s">&#39;Copenhagen Wolves&#39;</span><span class="p">],</span>
+    <span class="n">Unlimited</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;support&#39;</span><span class="p">,</span> <span class="s">&#39;Copenhagen Wolves&#39;</span><span class="p">],</span>
+    <span class="n">Mimer</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;top&#39;</span><span class="p">,</span> <span class="s">&#39;Supa Hot Crew XD&#39;</span><span class="p">],</span>
+    <span class="n">Impaler</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;jungle&#39;</span><span class="p">,</span> <span class="s">&#39;Supa Hot Crew XD&#39;</span><span class="p">],</span>
+    <span class="n">Moopz</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;mid&#39;</span><span class="p">,</span> <span class="s">&#39;Supa Hot Crew XD&#39;</span><span class="p">],</span>
+    <span class="n">Migxa</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;support&#39;</span><span class="p">,</span> <span class="s">&#39;Supa Hot Crew XD&#39;</span><span class="p">],</span>
+    <span class="n">Chauster</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;mid&#39;</span><span class="p">,</span> <span class="s">&#39;CLG&#39;</span><span class="p">],</span>
+    <span class="n">Saintvicious</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;support&#39;</span><span class="p">,</span> <span class="s">&#39;Curse&#39;</span><span class="p">],</span>
+    <span class="n">dexter</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;jungle&#39;</span><span class="p">,</span> <span class="s">&#39;CLG&#39;</span><span class="p">],</span>
+    <span class="n">Nickwu</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;jungle&#39;</span><span class="p">,</span> <span class="s">&#39;XDG&#39;</span><span class="p">],</span>
+    <span class="n">Zorozero</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;top&#39;</span><span class="p">,</span> <span class="s">&#39;Gambit&#39;</span><span class="p">],</span>
+    <span class="n">Nukeduck</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;mid&#39;</span><span class="p">,</span> <span class="s">&#39;Gambit&#39;</span><span class="p">],</span>
+    <span class="n">Hulberto</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;jungle&#39;</span><span class="p">,</span> <span class="s">&#39;Gambit&#39;</span><span class="p">],</span>
+    <span class="n">fury</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;adc&#39;</span><span class="p">,</span> <span class="s">&#39;Gambit&#39;</span><span class="p">]</span>
+  <span class="p">)</span>
+
+<span class="n">players</span><span class="p">[</span><span class="s">&#39;Mr RalleZ&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;adc&#39;</span><span class="p">,</span> <span class="s">&#39;Supa Hot Crew XD&#39;</span><span class="p">]</span>
+<span class="n">players</span><span class="p">[</span><span class="s">&#39;Alex Ich&#39;</span><span class="p">]</span> <span class="o">=</span><span class="p">[</span><span class="s">&#39;mid&#39;</span><span class="p">,</span> <span class="s">&#39;Gambit&#39;</span><span class="p">]</span>
+
+<span class="n">playerinfo</span> <span class="o">=</span> <span class="n">players</span>
+
+</pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+</div>
+</body>

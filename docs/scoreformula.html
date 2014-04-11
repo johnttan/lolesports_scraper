@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <title>scoreformula.py</title>
+  <link rel="stylesheet" href="pycco.css">
+</head>
+<body>
+<div id="background"></div>
+<div id='container'>
+  <div class='section'>
+    <div class='docs'><h1>scoreformula.py</h1></div>
+  </div>
+  <div class='clearall'>
+  <div class='section' id='section-0'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-0'>#</a>
+      </div>
+      <p>Formulae for calculating DraftScores</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-1'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-1'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span> <span class="nf">kdascore</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">role</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">role</span> <span class="ow">in</span> <span class="p">(</span><span class="s">&#39;top&#39;</span><span class="p">,</span> <span class="s">&#39;mid&#39;</span><span class="p">,</span> <span class="s">&#39;adc&#39;</span><span class="p">):</span>
+        <span class="n">score</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">((</span><span class="mi">2</span> <span class="o">*</span> <span class="n">k</span> <span class="o">+</span> <span class="n">a</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">d</span> <span class="o">+</span> <span class="mi">10</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">role</span> <span class="o">==</span> <span class="s">&#39;jungle&#39;</span><span class="p">:</span>
+        <span class="n">score</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">((</span><span class="mi">2</span> <span class="o">*</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">a</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">d</span> <span class="o">+</span> <span class="mi">10</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">role</span> <span class="o">==</span> <span class="s">&#39;support&#39;</span><span class="p">:</span>
+        <span class="n">score</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">((</span><span class="mf">1.5</span> <span class="o">*</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">a</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">d</span> <span class="o">+</span> <span class="mi">10</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">score</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-2'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-2'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span> <span class="nf">partscore</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">tk</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">tk</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="n">score</span> <span class="o">=</span> <span class="p">(</span><span class="n">k</span> <span class="o">+</span> <span class="n">a</span><span class="p">)</span> <span class="o">/</span> <span class="n">tk</span>
+
+    <span class="k">return</span> <span class="n">score</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-3'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-3'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span> <span class="nf">goldscore</span><span class="p">(</span><span class="n">gold</span><span class="p">,</span> <span class="n">oppgold</span><span class="p">,</span> <span class="n">gamegold</span><span class="p">):</span>
+    <span class="n">score</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">gold</span> <span class="o">-</span> <span class="n">oppgold</span><span class="p">)</span> <span class="o">/</span> <span class="n">gamegold</span>
+    <span class="k">return</span> <span class="n">score</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-4'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-4'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span> <span class="nf">csscore</span><span class="p">(</span><span class="n">cs</span><span class="p">,</span> <span class="n">oppcs</span><span class="p">,</span> <span class="n">role</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">role</span> <span class="ow">in</span> <span class="p">(</span><span class="s">&#39;top&#39;</span><span class="p">,</span> <span class="s">&#39;jungle&#39;</span><span class="p">,</span> <span class="s">&#39;mid&#39;</span><span class="p">):</span>
+        <span class="n">score</span> <span class="o">=</span> <span class="n">cs</span> <span class="o">/</span> <span class="p">(</span><span class="mi">200</span> <span class="o">+</span> <span class="n">oppcs</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">role</span> <span class="ow">in</span> <span class="p">(</span><span class="s">&#39;adc&#39;</span><span class="p">,</span> <span class="s">&#39;support&#39;</span><span class="p">):</span>
+        <span class="n">score</span> <span class="o">=</span> <span class="n">cs</span> <span class="o">/</span> <span class="p">(</span><span class="mi">75</span> <span class="o">+</span> <span class="n">oppcs</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">score</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-5'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-5'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span> <span class="nf">winscore</span><span class="p">(</span><span class="n">win</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">win</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">score</span> <span class="o">=</span> <span class="mf">0.2</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">score</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-6'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-6'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span> <span class="nf">deathscore</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">d</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">score</span> <span class="o">=</span> <span class="mf">0.2</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">score</span>
+
+<span class="n">scoreformuladict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">&#39;kdascore&#39;</span><span class="p">:</span> <span class="n">kdascore</span><span class="p">,</span>
+    <span class="s">&#39;partscore&#39;</span><span class="p">:</span> <span class="n">partscore</span><span class="p">,</span>
+    <span class="s">&#39;goldscore&#39;</span><span class="p">:</span> <span class="n">goldscore</span><span class="p">,</span>
+    <span class="s">&#39;csscore&#39;</span><span class="p">:</span> <span class="n">csscore</span><span class="p">,</span>
+    <span class="s">&#39;winscore&#39;</span><span class="p">:</span> <span class="n">winscore</span><span class="p">,</span>
+    <span class="s">&#39;deathscore&#39;</span><span class="p">:</span> <span class="n">deathscore</span><span class="p">,</span>
+<span class="p">}</span>
+
+</pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+</div>
+</body>

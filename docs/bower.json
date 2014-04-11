@@ -1,0 +1,9 @@
+{
+    "name": "ajsloldrafted",
+    "version": "0.0.1",
+    "dependencies": {
+        "font-awesome": "*",
+        "angular-latest": "*",
+        "purecss": "*"
+    }
+}
