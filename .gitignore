@@ -2,3 +2,13 @@ __pycache__/
 config.py
 docs/config.html
 configdeployurl.py
+node_modules/
+.idea/.name
+.idea/PythonLoLESports.iml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/scopes/scope_settings.xml
+.idea/vcs.xml
+.idea/workspace.xml
+config.html
