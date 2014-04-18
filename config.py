@@ -29,7 +29,7 @@ configuration = {
         'eu': list(range(1800, 1900))
     },
     'gamematchnumbers': {
-        'na': list(range(1856, 1956)),
+        'na': list(range(1856, 1986)),
         'eu': list(range(1987, 2500))
     }
 }

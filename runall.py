@@ -47,8 +47,8 @@ class Loldraftscraper:
 
 
 scraper = Loldraftscraper()
-reset = input('Reset? True or False')
-initialize = input('Initialize players? True or False. True if added new players')
-scraper.updateall(initialize, reset)
+# reset = input('Reset? True or False')
+# initialize = input('Initialize players? True or False. True if added new players')
+scraper.updateall(False, False)
 
 

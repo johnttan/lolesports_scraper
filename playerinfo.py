@@ -94,7 +94,9 @@ players = dict(
     SELFIE=['mid', 'Supa Hot Crew XD'],
     ROBERTxLEE=['adc', 'Evil Geniuses'],
     Ken=['support', 'Evil Geniuses'],
-    Thinkcard=['jungle', 'Evil Geniuses']
+    Thinkcard=['jungle', 'Evil Geniuses'],
+    goldenglue=['mid', 'Dignitas'],
+    KottenX=['jungle', 'Millenium']
   )
 
 players['Mr RalleZ'] = ['adc', 'Supa Hot Crew XD']

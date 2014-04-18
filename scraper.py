@@ -24,6 +24,7 @@ def processGame(jsonmatchdata):
             matchnumber = 1883
             region = 'na'
     else:
+        print(matchnumber)
         return 'Error: Match number not recognized'
 
     winteamname = ''
@@ -102,7 +103,7 @@ def retrieveandprocessGame(urlmatchnumber):
     url = cfg['retrieveurl'] + str(urlmatchnumber)
     jsonmatchdata = retrieveGame(url)
     matchdoc = processGame(jsonmatchdata)
-    #print(matchdoc)
+    # print(matchdoc)
     matchdoc['URLmatchnumber'] = urlmatchnumber
     return matchdoc
 
