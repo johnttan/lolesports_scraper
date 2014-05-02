@@ -12,3 +12,4 @@ node_modules/
 .idea/vcs.xml
 .idea/workspace.xml
 config.html
+*.pyc
