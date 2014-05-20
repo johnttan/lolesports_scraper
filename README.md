@@ -8,10 +8,6 @@ Rest of the files are for committing to MongoDB and various score processing for
 
 Refer to config for options.
 
-Docs in Docco Style at:
-
-http://ostzi.github.io/lolesportspythonscraper
-
 TODO:
 
 Immense refactoring into encapsulated classes and methods. Document useful public methods.
